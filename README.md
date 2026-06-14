@@ -4,12 +4,12 @@ A real-time distributed chat application built using microservices architecture 
 
  # Features
 
-- ⚡ Real-time messaging using Socket.IO
-- 🔐 Authentication system (JWT-based)
-- 🧠 Redis Pub/Sub for multi-service communication
-- 🐳 Dockerized microservices architecture
-- 🌐 Multiple backend services for scalability
-- 📡 Persistent chat storage with MongoDB
+-  Real-time messaging using Socket.IO
+-  Authentication system (JWT-based)
+-  Redis Pub/Sub for multi-service communication
+-  Dockerized microservices architecture
+-  Multiple backend services for scalability
+-  Persistent chat storage with MongoDB
 
 
 #  Architecture
