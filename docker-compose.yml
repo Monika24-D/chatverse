@@ -1,0 +1,41 @@
+services:
+
+  backend1:
+    image: chatapp/backend1:latest
+    container_name: be1
+    ports:
+      - "5000:5000"
+
+  backend2:
+    image: chatapp/backend2:latest
+    container_name: be2
+    ports:
+      - "5001:5000"
+
+  auth-backend:
+    image: chatapp/auth-backend:latest
+    container_name: auth-be
+    ports:
+      - "8000:8000"
+
+  frontend1:
+    image: chatapp/frontend1:latest
+    container_name: fe1
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_SOCKET_URL: http://backend1:5000
+    depends_on:
+      - backend1
+      - auth-backend
+
+  frontend2:
+    image: chatapp/frontend2:latest
+    container_name: fe2
+    ports:
+      - "8082:3000"
+    environment:
+      NEXT_PUBLIC_SOCKET_URL: http://backend2:5000
+    depends_on:
+      - backend2
+      - auth-backend
