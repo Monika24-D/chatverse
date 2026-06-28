@@ -3,3 +3,4 @@ backend/.env
 auth_backend/.env
 node_modules/
 */node_modules/
+chatverse-backup.txt
